@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Topup GOPAY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fa;
+    }
+    header {
+      background: #2196F3;
+      color: white;
+      padding: 16px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .input-box {
+      background: white;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 12px;
+      border-radius: 10px;
+    }
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 12px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 90px;
+      transition: transform 0.1s ease;
+    }
+    .card:hover {
+      transform: scale(1.01);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .icon {
+      width: 26px;
+      height: 26px;
+    }
+    .price {
+      margin-top: 10px;
+      font-size: 13px;
+      background: #2196F3;
+      color: white;
+      text-align: right;
+      padding: 4px 8px;
+      border-bottom-right-radius: 8px;
+      border-top-left-radius: 6px;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+
+<header>Kembali</header>
+
+<div class="input-box">
+  <input type="text" placeholder="Nomor HP">
+</div>
+
+<div class="grid">
+  <!-- Contoh 1 -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Saya%20ingin%20isi%20GOPAY%201.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 1.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 1.050</div>
+  </a>
+
+  <!-- Contoh 2 -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%202.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 2.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 2.050</div>
+  </a>
+
+  <!-- Tambahkan item lainnya sesuai kebutuhan -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%205.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 3.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 3.050</div>
+  </a>
+
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%2010.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 5.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 5.050</div>
+  </a>
+
+  <!-- dst... sampai 60.000 atau lebih -->
+</div>
+<div class="grid">
+  <!-- Contoh 1 -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Saya%20ingin%20isi%20GOPAY%201.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 10.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 10.050</div>
+  </a>
+
+  <!-- Contoh 2 -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%202.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 15.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 15.050</div>
+  </a>
+
+  <!-- Tambahkan item lainnya sesuai kebutuhan -->
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%205.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 20.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 20.050</div>
+  </a>
+
+  <a class="card" href="https://wa.me/628xxxxxxx?text=Isi%20GOPAY%2010.000">
+    <div class="card-top">
+      <div class="card-title">GOPAY 25.000</div>
+      <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png">
+    </div>
+    <div class="price">Rp 25.050</div>
+  </a>
+
+  <!-- dst... sampai 60.000 atau lebih -->
+</div>
+
+</body>
+</html>

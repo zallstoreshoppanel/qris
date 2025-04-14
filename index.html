@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IKI STORE Clone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f0f4ff;
+    }
+    .header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      padding: 20px;
+      color: white;
+      border-radius: 0 0 25px 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .header .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header .user-info .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .header .saldo {
+      margin-top: 5px;
+      font-size: 14px;
+    }
+    .header button {
+      background: white;
+      color: #007bff;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-weight: 600;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      margin: 15px 10px;
+    }
+    .menu-item {
+      text-align: center;
+      cursor: pointer;
+    }
+    .menu-item img {
+      width: 30px;
+      height: 30px;
+    }
+    .menu-item span {
+      font-size: 12px;
+      display: block;
+      margin-top: 5px;
+    }
+    .banner {
+      margin: 10px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .section-title {
+      font-weight: bold;
+      padding: 10px 15px;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      padding: 0 15px 15px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background: #eaf3ff;
+    }
+    .card img {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 5px;
+    }
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #ccc;
+      padding: 8px 0;
+    }
+    .bottom-nav div {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+    }
+    .bottom-nav img {
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin: 0 auto 4px;
+    }
+    dialog {
+      border: none;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    dialog::backdrop {
+      background: rgba(0,0,0,0.5);
+    }
+    .qris-img {
+      width: 100%;
+      max-width: 250px;
+    }
+    .close-btn {
+      margin-top: 10px;
+      padding: 5px 15px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="user-info">
+      <div>
+        <div class="name">Hai, Muhammad Rizal</div>
+        <div class="saldo">Saldo: Rp11</div>
+      </div>
+      <button onclick="alert('Menu WhatsApp!')">WhatsApp</button>
+    </div>
+  </div>
+
+  <div class="menu">
+    <a href="https://contoh.com/isi-saldo" class="menu-item">
+      <img src="https://img.icons8.com/fluency/48/wallet.png"/>
+      <span>Isi Saldo</span>
+    </a>
+    <a href="https://contoh.com/mutasi" class="menu-item">
+      <img src="https://img.icons8.com/fluency/48/bank-card-back-side.png"/>
+      <span>Mutasi</span>
+    </a>
+    <div class="menu-item" onclick="document.getElementById('qrisPopup').showModal()">
+      <img src="https://img.icons8.com/fluency/48/qr-code.png"/>
+      <span>QRIS</span>
+    </div>
+    <a href="https://contoh.com/bantuan" class="menu-item">
+      <img src="https://img.icons8.com/fluency/48/help.png"/>
+      <span>Bantuan</span>
+    </a>
+  </div>
+
+  <div class="banner">
+    <img src="https://i.imgur.com/yWf7rWI.png" alt="Banner Maintenance">
+  </div>
+
+  <div class="section-title">🔥 PAKET DATA PROMO 🔥</div>
+  <div class="grid">
+    <a href="https://contoh.com/indosat" class="card">
+      <img src="https://img.icons8.com/color/48/signal.png"/>
+      Indosat Only4U
+    </a>
+    <a href="https://contoh.com/three" class="card">
+      <img src="https://img.icons8.com/color/48/signal.png"/>
+      Three CuanMax
+    </a>
+    <a href="https://contoh.com/xl" class="card">
+      <img src="https://img.icons8.com/color/48/signal.png"/>
+      XL & Axis Cuanku
+    </a>
+    <a href="https://contoh.com/telkomsel" class="card">
+      <img src="https://img.icons8.com/color/48/signal.png"/>
+      Telkomsel Omni
+    </a>
+  </div>
+
+  <div class="section-title">Isi Ulang & Layanan</div>
+  <div class="grid">
+    <a href="https://contoh.com/pulsa" class="card"><img src="https://img.icons8.com/fluency/48/phone.png"/>Pulsa</a>
+    <a href="https://contoh.com/paket-data" class="card"><img src="https://img.icons8.com/fluency/48/data-in-both-directions.png"/>Paket Data</a>
+    <a href="https://contoh.com/pln" class="card"><img src="https://img.icons8.com/fluency/48/flash.png"/>Token PLN</a>
+    <a href="https://contoh.com/sms" class="card"><img src="https://img.icons8.com/fluency/48/sms.png"/>Telp & SMS</a>
+    <a href="https://contoh.com/masa-aktif" class="card"><img src="https://img.icons8.com/fluency/48/clock.png"/>Masa Aktif</a>
+    <a href="ewallet.html" class="card"><img src="https://img.icons8.com/fluency/48/wallet.png"/>E-Wallet</a>
+    <a href="https://contoh.com/tv" class="card"><img src="https://img.icons8.com/fluency/48/tv.png"/>TV</a>
+    <a href="https://contoh.com/wifi" class="card"><img src="https://img.icons8.com/fluency/48/wifi.png"/>Wifi ID</a>
+  </div>
+
+  <div class="bottom-nav">
+    <div><img src="https://img.icons8.com/fluency/48/home.png"/>Home</div>
+    <div><img src="https://img.icons8.com/fluency/48/synchronize.png"/>Transaksi</div>
+    <div><img src="https://img.icons8.com/fluency/48/money.png"/>Saldo</div>
+    <div><img src="https://img.icons8.com/fluency/48/info.png"/>Informasi</div>
+    <div><img src="https://img.icons8.com/fluency/48/user.png"/>Akun</div>
+  </div>
+
+  <dialog id="qrisPopup">
+    <h3>Scan QRIS untuk Pembayaran</h3>
+    <img class="qris-img" src="https://i.imgur.com/hTF8vGk.png" alt="QRIS Code">
+    <br/>
+    <button class="close-btn" onclick="document.getElementById('qrisPopup').close()">Tutup</button>
+  </dialog>
+
+</body>
+</html>
